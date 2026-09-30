@@ -1,0 +1,29 @@
+{
+  "banks": [
+    {
+      "id": "zhongkao",
+      "name": "中考题库",
+      "description": "中学英语核心词汇，覆盖中考考纲",
+      "wordCount": 110,
+      "file": "/data/wordbank-zhongkao.json"
+    }
+  ],
+  "dailyCountOptions": [
+    {"value": 5, "label": "5", "recommended": false},
+    {"value": 10, "label": "10", "recommended": true},
+    {"value": 20, "label": "20", "recommended": false},
+    {"value": 30, "label": "30", "recommended": false},
+    {"value": 50, "label": "50", "recommended": false}
+  ],
+  "customRange": {"min": 5, "max": 100},
+  "reviewNodes": [
+    {"id": "30min", "type": "timed", "offsetMs": 1800000, "label": "30分钟后"},
+    {"id": "12hr", "type": "timed", "offsetMs": 43200000, "label": "12小时后"},
+    {"id": "day2", "type": "daily", "offsetDays": 2, "label": "第2天"},
+    {"id": "day4", "type": "daily", "offsetDays": 4, "label": "第4天"},
+    {"id": "day8", "type": "daily", "offsetDays": 8, "label": "第8天"},
+    {"id": "day15", "type": "daily", "offsetDays": 15, "label": "第15天"},
+    {"id": "day30", "type": "daily", "offsetDays": 30, "label": "第30天"}
+  ],
+  "longBreakThresholdDays": 8
+}

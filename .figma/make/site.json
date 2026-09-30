@@ -1,0 +1,10 @@
+{
+  "description": "A minimalist vocabulary learning app for middle school students that schedules daily new words and reviews using a memory curve to boost retention without distractions.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

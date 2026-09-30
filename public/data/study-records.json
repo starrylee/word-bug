@@ -1,0 +1,34 @@
+{
+  "scenarios": {
+    "normal": {
+      "description": "Normal daily learning for 4 days",
+      "learnedWords": [
+        {"wordId":"w001","learnedAt":1709308800000,"learnedDate":"2024-03-01","feedback":"know","reviewedNodes":["30min","12hr","day2","day4"]},
+        {"wordId":"w002","learnedAt":1709308860000,"learnedDate":"2024-03-01","feedback":"fuzzy","reviewedNodes":["30min","12hr","day2","day4"]},
+        {"wordId":"w003","learnedAt":1709308920000,"learnedDate":"2024-03-01","feedback":"know","reviewedNodes":["30min","12hr","day2","day4"]},
+        {"wordId":"w004","learnedAt":1709395200000,"learnedDate":"2024-03-02","feedback":"know","reviewedNodes":["30min","12hr","day2"]},
+        {"wordId":"w005","learnedAt":1709395260000,"learnedDate":"2024-03-02","feedback":"fuzzy","reviewedNodes":["30min","12hr"]},
+        {"wordId":"w006","learnedAt":1709481600000,"learnedDate":"2024-03-03","feedback":"forgot","reviewedNodes":["30min"]},
+        {"wordId":"w007","learnedAt":1709481660000,"learnedDate":"2024-03-03","feedback":"know","reviewedNodes":["30min"]}
+      ]
+    },
+    "shortBreak": {
+      "description": "3-day break (days 4-6), returned on day 7",
+      "learnedWords": [
+        {"wordId":"w001","learnedAt":1709308800000,"learnedDate":"2024-03-01","feedback":"know","reviewedNodes":["30min","12hr","day2"]},
+        {"wordId":"w002","learnedAt":1709308860000,"learnedDate":"2024-03-01","feedback":"fuzzy","reviewedNodes":["30min","12hr"]},
+        {"wordId":"w003","learnedAt":1709308920000,"learnedDate":"2024-03-01","feedback":"know","reviewedNodes":["30min","12hr","day2"]},
+        {"wordId":"w004","learnedAt":1709395200000,"learnedDate":"2024-03-02","feedback":"know","reviewedNodes":["30min","12hr"]},
+        {"wordId":"w005","learnedAt":1709395260000,"learnedDate":"2024-03-02","feedback":"fuzzy","reviewedNodes":["30min"]}
+      ]
+    },
+    "longBreak": {
+      "description": "8+ day break triggers the choice modal",
+      "learnedWords": [
+        {"wordId":"w001","learnedAt":1709308800000,"learnedDate":"2024-03-01","feedback":"know","reviewedNodes":["30min","12hr"]},
+        {"wordId":"w002","learnedAt":1709308860000,"learnedDate":"2024-03-01","feedback":"fuzzy","reviewedNodes":["30min"]},
+        {"wordId":"w003","learnedAt":1709308920000,"learnedDate":"2024-03-01","feedback":"know","reviewedNodes":["30min","12hr"]}
+      ]
+    }
+  }
+}
