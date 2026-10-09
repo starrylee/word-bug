@@ -73,6 +73,9 @@ export default function StudyPage({
   const [sessionWordIds] = useState<string[]>(initial.sessionWordIds);
   const [reminderModal, setReminderModal] = useState<{ type: '30min' | '12hr'; wordIds: string[] } | null>(null);
   const [reminderDismissed, setReminderDismissed] = useState(false);
+  // Bumped whenever the queue is replaced outside handleFeedback (e.g. reminder
+  // review), so WordCard remounts and resets its internal flip state (AC-1).
+  const [cardEpoch, setCardEpoch] = useState(0);
 
   // Mark new words as learned on mount when starting in 'new' phase
   const markedNewRef = useRef(false);
@@ -181,6 +184,7 @@ export default function StudyPage({
       <div className="flex-1 flex items-start justify-center px-5 pt-4 pb-10">
         <div className="w-full max-w-sm">
           <WordCard
+            key={`${cardEpoch}-${currentWord.id}`}
             word={currentWord}
             cardIndex={currentIndex}
             totalCards={queue.length}
@@ -200,6 +204,7 @@ export default function StudyPage({
             const words = reminderModal.wordIds
               .map(id => wordbank.find(w => w.id === id))
               .filter(Boolean) as Word[];
+            setCardEpoch(e => e + 1);
             setQueue(words);
             setCurrentIndex(0);
             setForgotIds([]);
