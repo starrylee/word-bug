@@ -1,0 +1,31 @@
+{
+  "bank_id": "zhongkao",
+  "content_version": "0.1.0-sample",
+  "note": "本文件是 FT-002-US-01 四要素字段标准的演示样例（非 US-02 试产产出），用于展示书写标准与校验器冒烟测试。正式内容生产见 FT-002-US-02。",
+  "words": [
+    {
+      "word": "ability",
+      "definition_en": "the power or skill to do something",
+      "example_en": "She has the ability to solve the problem.",
+      "definition_zh": "能力；才能"
+    },
+    {
+      "word": "book",
+      "definition_en": "n. a set of printed pages; v. to arrange something in advance",
+      "example_en": "I read a book about stars every night.",
+      "definition_zh": "n. 书；书本 v. 预订"
+    },
+    {
+      "word": "Friday",
+      "definition_en": "the day of the week between Thursday and Saturday",
+      "example_en": "We have a music lesson on Friday.",
+      "definition_zh": "星期五"
+    },
+    {
+      "word": "ice cream",
+      "definition_en": "a sweet cold food made from milk",
+      "example_en": "I like eating ice cream in summer.",
+      "definition_zh": "冰激凌；冰淇淋"
+    }
+  ]
+}

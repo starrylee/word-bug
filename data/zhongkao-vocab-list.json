@@ -1,0 +1,7321 @@
+{
+  "meta": {
+    "bank_id": "zhongkao",
+    "bank_name": "中考题库",
+    "list_version": "1.0.0",
+    "generated_at": "2026-10-04",
+    "word_count": 1806,
+    "scale_window": [
+      1600,
+      2100
+    ],
+    "authoritative_anchor": "《义务教育英语课程标准（2022年版）》附录词汇表（约1600词，其中二级（小学）505词、其余为初中阶段基本词汇）",
+    "sources": [
+      {
+        "id": "ecdict-zk",
+        "description": "ECDICT 开源英汉词典库（MIT License）中 tag=zk（中考）标签词条，作为 2022 课标词汇范围的机器可读基线",
+        "url": "https://github.com/skywind3000/ECDICT",
+        "retrieved": "2026-10-04",
+        "entry_count": 1601
+      },
+      {
+        "id": "cs2022-delta",
+        "description": "《义务教育英语课程标准（2022年版）》相对 2011 版新增词汇清单（270 词，第三方公开整理；已按来源原样收录，其中 65 词与基线重复自动去重）",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzIyNTA4NzYxNw==&mid=2649634290&idx=2&sn=2a89c4cc1fa548605de2f4d8f88489fc",
+        "retrieved": "2026-10-04",
+        "entry_count": 270
+      }
+    ],
+    "inclusion_rules_ref": "docs/中考词表范围与四要素标准.md#一词表范围界定ac-1",
+    "quality_rules_ref": "docs/中考词表范围与四要素标准.md#三合格判定规则ac-3",
+    "notes": [
+      "词条以词典原形为基准，屈折变形（复数、时态、比较级等）不单列；来源清单明确收录的派生形容词（如 amazing、crowded、lost）按来源原样保留。",
+      "拼写统一采用课标英式口径（colour/favourite/grey/honour/organise/recognise 等），美式变体不作为独立词条；英式归一剔除 math（保留 maths）、percent（保留 per cent）。practise 与 practice 为英式动词/名词的合法区分，双条保留。",
+      "专有名词（国名、语言、地名、星期、月份、节日）、缩略语（CD、TV、AI、a.m.、p.m. 等）与多词/连字符词条（ice cream、kung fu、ping-pong、T-shirt 等）按来源保留。",
+      "已知局限（PO 核对项）：① ECDICT zk 基线与 2022 课标原件存在个体差异（如 attract 在 2022 版第三方转写中出现、不在本清单）；② 2022 版相对 2011 版的删减词无可靠公开对照，基线中可能含少量已删词；③ cs2022-delta 来源为第三方整理清单，未经课标原件逐词核对。核对后如需增删，请修改本文件并在对应词条补充 source 字段说明。"
+    ],
+    "stats": {
+      "total": 1806,
+      "from_ecdict_zk": 1601,
+      "from_cs2022_delta": 205,
+      "cs2022_delta_already_in_zk": 65,
+      "british_variants_dropped": [
+        "math",
+        "percent"
+      ],
+      "capitalized_entries": 51,
+      "multiword_entries": 3,
+      "hyphenated_entries": 4,
+      "letter_distribution": {
+        "a": 112,
+        "b": 105,
+        "c": 156,
+        "d": 86,
+        "e": 72,
+        "f": 98,
+        "g": 55,
+        "h": 82,
+        "i": 44,
+        "j": 17,
+        "k": 20,
+        "l": 67,
+        "m": 89,
+        "n": 48,
+        "o": 39,
+        "p": 148,
+        "q": 7,
+        "r": 78,
+        "s": 218,
+        "t": 128,
+        "u": 20,
+        "v": 19,
+        "w": 80,
+        "x": 1,
+        "y": 14,
+        "z": 3
+      },
+      "length_distribution": {
+        "1": 2,
+        "2": 26,
+        "3": 162,
+        "4": 406,
+        "5": 377,
+        "6": 309,
+        "7": 226,
+        "8": 130,
+        "9": 94,
+        "10": 43,
+        "11": 22,
+        "12": 2,
+        "13": 5,
+        "14": 2
+      }
+    }
+  },
+  "words": [
+    {
+      "word": "a",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "a.m.",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "ability",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "able",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "about",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "above",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "abroad",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "absent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "accent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "accept",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "accident",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "account",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "ache",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "achieve",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "across",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "act",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "action",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "active",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "activity",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "actually",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "ad",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "add",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "address",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "admire",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "adult",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "advantage",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "advertisement",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "advice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "advise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "afford",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "afraid",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "after",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "afternoon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "again",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "against",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "age",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ago",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "agree",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "agreement",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ahead",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "AI",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "aid",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "aim",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "air",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "airline",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "airplane",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "airport",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "alarm",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "alive",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "all",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "allow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "almost",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "alone",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "along",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "aloud",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "already",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "also",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "although",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "always",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "amazing",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "America",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "American",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "among",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ancient",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "and",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "angry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "animal",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "another",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "answer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ant",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "any",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "anybody",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "anyone",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "anything",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "anyway",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "anywhere",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "apartment",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "app",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "appear",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "apple",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "April",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "area",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "argue",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "arm",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "army",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "around",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "arrive",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "art",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "article",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "as",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Asia",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Asian",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ask",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "asleep",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "astronaut",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "at",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "athlete",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "Atlantic",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "attack",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "attention",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "august",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "aunt",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Australia",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Australian",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "autumn",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "available",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "average",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "avoid",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "awake",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "award",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "aware",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "away",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "baby",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "back",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "background",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bad",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "badminton",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "bag",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "balance",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "ball",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "balloon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bamboo",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "banana",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "band",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "bank",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "baseball",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "basic",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "basket",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "basketball",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bat",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "bath",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "bathroom",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "be",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "beach",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "beat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "beautiful",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "because",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "become",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bed",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bedroom",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bee",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "beef",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "before",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "begin",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "behave",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "behaviour",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "behind",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "believe",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bell",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "belong",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "below",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "belt",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "benefit",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "beside",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "besides",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "between",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "beyond",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bicycle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "big",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bike",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bill",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bin",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "biology",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "bird",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "birth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "birthday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "biscuit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bitter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "black",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "blackboard",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bleed",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "blind",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "blood",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "blow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "board",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "boat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "body",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "boil",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "book",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "boring",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "born",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "borrow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "boss",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "both",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bottle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bottom",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bowl",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "box",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "boy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "brain",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "brave",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bread",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "break",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "breakfast",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "breath",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "breathe",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bridge",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bright",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bring",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "brother",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "brown",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "brush",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "budget",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "build",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "building",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bully",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "burn",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bus",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "business",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "busy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "but",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "butter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "butterfly",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "buy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "by",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "bye",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cabbage",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cake",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "call",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "calm",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "camel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "camera",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "camp",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "can",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Canada",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cancel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cancer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "candle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "candy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cap",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "capital",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "captain",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "car",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "card",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "care",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "careful",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "careless",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "carry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "case",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "cash",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "cat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "catch",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cause",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "CD",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "CD-ROM",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ceiling",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "celebrate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "centre",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "century",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "certain",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chair",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chairman",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chalk",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "challenge",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "champion",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "chance",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "change",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chant",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "character",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "characteristic",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "charity",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "chat",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "cheap",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cheat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "check",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cheer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cheese",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chemistry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chess",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chest",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chicken",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "child",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "China",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Chinese",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chip",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "chocolate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "choice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "choose",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chopsticks",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "chore",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "Christmas",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "church",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cinema",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "circle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "citizen",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "city",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "clap",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "class",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "classic",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "classmate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "classroom",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "clean",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "clear",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "clever",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "click",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "climate",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "climb",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "clock",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "clone",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "close",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "clothes",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cloud",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cloudy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "club",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "coach",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "coal",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "coast",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "coat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "coffee",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "coin",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "coke",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cold",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "collect",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "college",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "colour",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "come",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "comfortable",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "common",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "communicate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "communication",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "company",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "compare",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "compete",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "competition",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "complete",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "composition",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "computer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "concert",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "condition",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "conference",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "confidence",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "congratulation",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "connect",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "consider",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "continue",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "control",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "convenient",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "conversation",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cook",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cooker",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cool",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cooperate",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "copy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "corner",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "correct",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cost",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cotton",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cough",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "could",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "count",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "country",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "countryside",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "couple",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "courage",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "course",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cousin",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cover",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "crayon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "crazy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "create",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "creative",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "cross",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "crowded",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "cruel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cucumber",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "culture",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "cup",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "curious",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "cut",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dad",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "daily",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dance",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "danger",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dangerous",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dare",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dark",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "date",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "daughter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "day",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dead",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "deaf",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "deal",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dear",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "death",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "December",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "decide",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "decision",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "deep",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "degree",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "delicious",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dentist",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "depend",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "describe",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "design",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "desk",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "develop",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "development",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dialogue",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "diary",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dictionary",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "die",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "diet",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "difference",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "different",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "difficult",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "difficulty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dig",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "digital",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "dinner",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "direct",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "direction",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "director",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dirty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "disappoint",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "disaster",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "discover",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "discovery",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "discuss",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "discussion",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "disease",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dish",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dismiss",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "disturb",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "divide",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "do",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "doctor",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dog",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "doll",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dollar",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "donate",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "door",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "double",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "doubt",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "down",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "download",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "downstairs",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dozen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dragon",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "drama",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "draw",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "drawer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dream",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dress",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "drink",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "drive",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "driver",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "drop",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "drug",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "drum",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "duck",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dumpling",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "during",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "duty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "dvd",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "each",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "eagle",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "ear",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "early",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "earth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "east",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "easy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "eat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "edge",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "education",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "effect",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "effort",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "egg",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "eight",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "eighteen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "eighth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "eighty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "either",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "elder",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "electric",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "elephant",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "eleven",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "else",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "email",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "emergency",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "emperor",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "empress",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "empty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "encourage",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "end",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "enemy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "energetic",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "energy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "engineer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "England",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "English",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "enjoy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "enough",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "enter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "environment",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "era",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "eraser",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "especially",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Europe",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "European",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "even",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "evening",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "event",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "ever",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "every",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "everybody",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "everyday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "everyone",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "everything",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "everywhere",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "exam",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "examination",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "examine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "example",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "excellent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "except",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "excite",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "excuse",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "exercise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "expect",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "expensive",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "experience",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "experiment",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "explain",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "explore",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "express",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "eye",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "face",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fact",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "factory",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fail",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fair",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fall",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "false",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "familiar",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "family",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "famous",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fan",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fantastic",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "far",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "farm",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "farmer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fashion",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "fast",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "father",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "favourite",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fear",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "February",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "feed",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "feel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "feeling",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "festival",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fetch",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fever",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "few",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "field",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fifteen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fifth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fifty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fight",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fill",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "film",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "final",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "find",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "finger",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "finish",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fire",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fireman",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "firework",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "first",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fish",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fisherman",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "five",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fix",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "flag",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "flat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "flood",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "floor",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "flower",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "flu",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fly",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "focus",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "fog",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "folk",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "follow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "food",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fool",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "foot",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "football",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "for",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "force",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "foreign",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "foreigner",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "forest",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "forever",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "forget",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fork",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "form",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "forty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "forward",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "found",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "four",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fourteen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fourth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fox",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "free",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "freeze",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fresh",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Friday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fridge",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "friend",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "friendly",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "friendship",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "frog",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "from",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "front",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fruit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "full",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "fun",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "funny",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "furniture",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "future",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "game",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "garden",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "gas",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "gate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "general",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "gentleman",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "geography",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "gesture",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "get",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "gift",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "giraffe",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "girl",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "give",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "glad",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "glass",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "glove",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "go",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "goal",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "goat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "God",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "gold",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "golden",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "good",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "goodbye",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "goose",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "government",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grade",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "graduate",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "grammar",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grandchild",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "granddaughter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grandfather",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grandma",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grandmother",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grandpa",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grandparent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grandson",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "granny",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grape",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grass",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "great",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "green",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "greet",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "greeting",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grey",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "ground",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "group",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "grow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "guard",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "guess",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "guest",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "guitar",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "gun",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "gym",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "gymnasium",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "habit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hair",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "half",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hall",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ham",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hamburger",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hand",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "handbag",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "handsome",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "handwriting",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hang",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "happen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "happy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hard",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hardly",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "harm",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "hat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "have",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "he",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "head",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "headache",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "health",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "healthy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hear",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "heart",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "heat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "heaven",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "heavy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "height",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hello",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "help",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "helpful",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "her",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "here",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hero",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hers",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "herself",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hide",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "high",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hike",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "hill",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "him",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "himself",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "his",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "history",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hobby",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hold",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hole",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "holiday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "home",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hometown",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "homework",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "honest",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "honey",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "honour",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hope",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "horse",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hospital",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "host",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "hostess",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "hot",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hotdog",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hotel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hour",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "house",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "housework",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "how",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "however",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hug",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "huge",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "human",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "humorous",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "humour",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "hundred",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hungry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hunt",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "hurry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "hurt",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "husband",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "I",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ice cream",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "idea",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "if",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ill",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "illness",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "imagine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "immediately",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "important",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "impossible",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "improve",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "in",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "inch",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "include",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "increase",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "India",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Indian",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "industry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "influence",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "information",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ink",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "insect",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "inside",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "insist",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "instead",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "instruction",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "intention",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "interest",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "interesting",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "international",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "internet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "interview",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "into",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "introduce",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "introduction",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "invent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "invention",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "invite",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "iron",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "island",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "it",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "its",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "itself",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "jacket",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "January",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Japan",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Japanese",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "jeans",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "job",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "jog",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "join",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "joke",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "joy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "judge",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "juice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "July",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "jump",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "June",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "junior",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "just",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "keep",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "key",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "keyboard",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kick",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kid",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kill",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kilo",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kilogram",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kilometre",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kind",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "king",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kiss",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kitchen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kite",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "knee",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "knife",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "knock",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "know",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "knowledge",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "kung fu",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "lab",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "laboratory",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "labour",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lady",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lake",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lamb",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lamp",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "land",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "landscape",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "language",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lantern",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "laptop",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "large",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "late",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "laugh",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "law",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lawyer",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "lay",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lazy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lead",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "leader",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "leaf",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "learn",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "least",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "leave",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "left",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "leg",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lemonade",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lend",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lesson",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "let",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "letter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "level",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "library",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "license",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lie",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "life",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lift",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "light",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lightning",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "like",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "likely",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "line",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lion",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "list",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "listen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "literature",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "litter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "little",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "live",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lively",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lock",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "London",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lonely",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "long",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "look",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lose",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "loss",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "lost",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "lot",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "loud",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "love",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lovely",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "low",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "luck",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lucky",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "lunch",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "machine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mad",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "madam",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "madame",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "magazine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "magic",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mail",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "main",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "make",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mall",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "man",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "manage",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "manager",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "manner",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "many",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "map",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "march",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mark",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "market",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "marriage",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "marry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "master",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "match",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "material",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "mathematics",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "maths",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "may",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "maybe",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "me",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "meal",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mean",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "meaning",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "meat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "medal",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "medical",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "medicine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "medium",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "meet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "meeting",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "member",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "memory",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mend",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mention",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "menu",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "message",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "metal",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "method",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "metre",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "middle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "might",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mile",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "milk",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mind",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "minute",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mirror",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "miss",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mistake",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mobile",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "model",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "modern",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mom",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "moment",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Monday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "money",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "monitor",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "monkey",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "month",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "moon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "more",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "morning",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "most",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mother",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "motorcycle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mountain",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mouse",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mouth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "move",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "movie",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Mr.",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Mrs.",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "Ms.",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "much",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "murder",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "museum",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "music",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "must",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "mutton",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "my",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "myself",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "name",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "narrow",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "nation",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "national",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "natural",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nature",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "near",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nearly",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "necessary",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "neck",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "need",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "negative",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "neighbour",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "neither",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nervous",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "never",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "new",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "news",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "newspaper",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "next",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "night",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nineteen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ninety",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ninth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "no",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nobody",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nod",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "noise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "none",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "noodle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "noon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nor",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "normal",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "North",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "northern",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nose",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "not",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "note",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "notebook",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nothing",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "notice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "novel",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "November",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "now",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "number",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "nurse",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "object",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ocean",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "October",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "of",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "off",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "offer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "office",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "officer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "often",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "oil",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "OK",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "old",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Olympic",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "on",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "once",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "one",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "oneself",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "onion",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "only",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "open",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "opera",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "operate",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "operation",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "opinion",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "or",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "orange",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "order",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "organise",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "other",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "our",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ours",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ourselves",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "out",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "outside",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "oven",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "over",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "overcoat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "own",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "owner",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "p.m.",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "pacific",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pack",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "package",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "packet",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "page",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "paint",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pair",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "palace",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pale",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pancake",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "panda",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "paper",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "paragraph",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "pardon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "parent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "park",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "part",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "partner",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "party",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pass",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "passage",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "passenger",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "passport",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "past",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "path",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "patient",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pay",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "peace",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pear",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pence",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pencil",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "penguin",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "penny",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "people",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pepper",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "per cent",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "perfect",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "perform",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "perhaps",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "period",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "person",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "personal",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "phone",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "photo",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "photograph",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "physics",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "piano",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pick",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "picnic",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "picture",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pie",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "piece",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pig",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pill",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "pilot",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ping-pong",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "pink",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pioneer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pity",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pizza",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "place",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "plain",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "plan",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "plane",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "planet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "plant",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "plastic",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "plate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "play",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "playground",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pleasant",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "please",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pleasure",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "plenty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pocket",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "poem",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "poet",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "point",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "police",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "policeman",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "policy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "polite",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pond",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pool",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "poor",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pop",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "popular",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "population",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pork",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "porridge",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "position",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "positive",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "possible",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "post",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "postcard",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "postman",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pot",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "potato",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pound",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pour",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "power",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "practice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "practise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "praise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "prefer",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "prepare",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "present",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "president",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "press",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "pressure",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "pretty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "prevent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "price",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pride",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "primary",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "prince",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "princess",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "print",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "prison",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "prisoner",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "private",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "prize",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "probably",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "problem",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "produce",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "programme",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "progress",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "promise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pronounce",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pronunciation",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "proper",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "protect",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "proud",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "prove",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "provide",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "public",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "publish",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "pull",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "punish",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "pupil",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "purple",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "purpose",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "purse",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "push",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "put",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "quality",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "quarter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "queen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "question",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "quick",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "quiet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "quite",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rabbit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "race",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "radio",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "railway",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rain",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rainbow",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "raincoat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rainy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "raise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rapid",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rather",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "reach",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "read",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ready",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "real",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "realise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "really",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "reason",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "receive",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "recent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "recite",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "recognise",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "recommend",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "record",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "recorder",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "recycle",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "red",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "reduce",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "refuse",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "regard",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "regret",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "relation",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "relax",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "remain",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "remember",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "remind",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "repair",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "repeat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "reply",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "report",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "require",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "research",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "respect",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "responsible",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "rest",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "restaurant",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "result",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "retell",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "return",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "review",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rich",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "riddle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ride",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "right",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ring",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "risk",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "river",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "road",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "robot",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rock",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rocket",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "role",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "room",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rope",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rose",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "round",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "row",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rubber",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rubbish",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rule",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ruler",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "run",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "rush",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Russia",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Russian",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sad",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "safe",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "safety",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sail",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "salad",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sale",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "salt",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "same",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sand",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sandwich",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "satisfy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Saturday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sausage",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "save",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "say",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "scare",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "scarf",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "school",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "schoolbag",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "science",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "scientist",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "score",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "screen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sea",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "search",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "season",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "seat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "second",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "secret",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "secretary",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "see",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "seem",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "seldom",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sell",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "send",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sense",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sentence",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "separate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "September",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "serious",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "servant",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "serve",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "service",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "set",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "seven",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "seventeen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "seventh",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "seventy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "several",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shake",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shall",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shame",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shape",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "share",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shark",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "she",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sheep",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shelf",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ship",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shirt",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shock",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "shoe",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shoot",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "shop",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "short",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shorts",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "should",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shoulder",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shout",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "show",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shower",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shut",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "shy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sick",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "side",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sight",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "silence",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "silent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "silk",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "silly",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "silver",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "similar",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "simple",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "since",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sing",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "single",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sir",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sister",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "situation",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "six",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sixteen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sixth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sixty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "size",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "skate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ski",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "skill",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "skirt",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sky",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sleep",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sleepy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "slim",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "slow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "small",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "smart",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "smell",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "smile",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "smoke",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "smooth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "snack",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "snake",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "snow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "snowy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "so",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "soap",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "social",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "socialism",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "society",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "socks",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sofa",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "soft",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "soil",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "soldier",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "solid",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "some",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "somebody",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "someone",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "something",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sometimes",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "somewhere",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "son",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "song",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "soon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sore",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "sorry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sort",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sound",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "soup",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sour",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "south",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "southern",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "space",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "spare",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "speak",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "speaker",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "special",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "speech",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "speed",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "spell",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "spend",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "spirit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "spoon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sport",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "spread",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "spring",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "square",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stage",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "stairs",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stamp",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stand",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "standard",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "star",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "start",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "state",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "station",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stay",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "steal",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "steel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "step",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stick",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "still",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stomach",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stone",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stop",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "store",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "storm",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "story",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "strange",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stranger",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "strawberry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stream",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "street",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stress",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "strict",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "strong",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "student",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "study",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "stupid",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "style",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "succeed",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "success",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "successful",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "such",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sudden",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sugar",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "suggest",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "suggestion",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "summer",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sun",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Sunday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sunny",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "supermarket",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "supper",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "supply",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "suppose",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sure",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "surface",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "surprise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "survive",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "sweater",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sweep",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "sweet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "swim",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "swimming",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "swing",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "symbol",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "T-shirt",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "table",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tail",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "take",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tale",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "talent",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "talk",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tall",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tap",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "tape",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "task",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "taste",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "taxi",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tea",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "teach",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "teacher",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "team",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "teamwork",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "technology",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "teenage",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "telephone",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "television",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tell",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "temperature",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ten",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tennis",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tent",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tenth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "term",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "terrible",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "test",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "text",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "than",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thank",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "that",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "the",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "theatre",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "their",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "theirs",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "them",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "themselves",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "then",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "there",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "therefore",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "these",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "they",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thick",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thin",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thing",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "think",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "third",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thirsty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thirteen",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thirty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "this",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "those",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "though",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thought",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thousand",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thread",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "three",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "throat",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "through",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "throw",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "thunder",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "Thursday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ticket",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tidy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tie",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tiger",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "till",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "time",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tiny",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tired",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "to",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "today",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tofu",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "together",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "toilet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tomato",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tomorrow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ton",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tongue",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tonight",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "too",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tool",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tooth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "toothache",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "toothbrush",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "toothpaste",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "top",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "total",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "touch",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tour",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tourist",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "toward",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "towel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tower",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "town",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "toy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "trade",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tradition",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "traditional",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "traffic",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "train",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "training",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "translate",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "travel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "treasure",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "treatment",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "tree",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "trip",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "trouble",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "trousers",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "truck",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "true",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "trust",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "truth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "try",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Tuesday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "turn",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "TV",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "twelfth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "twelve",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "twentieth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "twenty",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "twice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "two",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "ugly",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "umbrella",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "uncle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "under",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "underground",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "understand",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "uniform",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "unit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "universe",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "university",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "unless",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "until",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "up",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "upon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "upstairs",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "us",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "use",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "used",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "useful",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "usual",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "vacation",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "value",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "vcd",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "vegetable",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "vehicle",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "very",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "victory",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "video",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "view",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "village",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "violin",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "virus",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "visit",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "visitor",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "voice",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "volleyball",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "voluntary",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "volunteer",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "vote",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "wait",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wake",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "walk",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wall",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "want",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "war",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "warm",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "warn",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wash",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "waste",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "watch",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "water",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "watermelon",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wave",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "way",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "we",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "weak",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wealth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wear",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "weather",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "website",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "Wednesday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "week",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "weekday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "weekend",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "weigh",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "weight",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "welcome",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "well",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "west",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "western",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "whale",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "what",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "whatever",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wheat",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wheel",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "when",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "whenever",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "where",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "whether",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "which",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "while",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "white",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "who",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "whole",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "whom",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "whose",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "why",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wide",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wife",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "will",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "win",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wind",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "window",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "windy",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wine",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wing",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "winner",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "winter",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wise",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wish",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "with",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "within",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "without",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wolf",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "woman",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wonder",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wonderful",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wood",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "word",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "work",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "worker",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "world",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "worry",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "worth",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "would",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wound",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "write",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "wrong",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "x-ray",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yard",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "year",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yellow",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yes",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yesterday",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yet",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yogurt",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "you",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "young",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "your",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yours",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yourself",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "yourselves",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "youth",
+      "source": "cs2022-delta"
+    },
+    {
+      "word": "zebra",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "zero",
+      "source": "ecdict-zk"
+    },
+    {
+      "word": "zoo",
+      "source": "ecdict-zk"
+    }
+  ]
+}

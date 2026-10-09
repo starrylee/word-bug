@@ -23,11 +23,12 @@ export default function App() {
   const [showChangeCount, setShowChangeCount] = useState(false);
   const [savePromptTriggered, setSavePromptTriggered] = useState(false);
 
-  // Load wordbank
+  // Load wordbank (FT-002-US-03 导入产物：元数据 + words 数组)
   useEffect(() => {
     fetch('/data/wordbank-zhongkao.json')
       .then(r => r.json())
-      .then(setWordbank);
+      .then(d => setWordbank(d.words))
+      .catch(() => {});
   }, []);
 
   // Mark today opened and detect long break
@@ -77,7 +78,7 @@ export default function App() {
 
       <main>
         {state.view === 'bank-select' && (
-          <BankSelectPage onSelect={actions.selectBank} />
+          <BankSelectPage wordCount={wordbank.length} onSelect={actions.selectBank} />
         )}
 
         {state.view === 'count-select' && (

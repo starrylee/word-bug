@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "oxfmt"
+    "format": "oxfmt",
+    "validate:vocab": "node scripts/validate-vocab.mjs data/zhongkao-vocab-content.sample.json",
+    "validate:trial": "node scripts/validate-vocab.mjs data/zhongkao-vocab-content.trial.json",
+    "validate:content": "node scripts/validate-vocab.mjs data/zhongkao-vocab-content.json --full",
+    "import:vocab": "node scripts/import-vocab.mjs",
+    "test:vocab": "node scripts/test-vocab-lookup.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",

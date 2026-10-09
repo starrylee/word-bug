@@ -1,8 +1,9 @@
 interface BankSelectPageProps {
+  wordCount: number;
   onSelect: (bankId: string) => void;
 }
 
-export default function BankSelectPage({ onSelect }: BankSelectPageProps) {
+export default function BankSelectPage({ wordCount, onSelect }: BankSelectPageProps) {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-56px)] px-6">
       <div className="w-full max-w-sm">
@@ -15,7 +16,9 @@ export default function BankSelectPage({ onSelect }: BankSelectPageProps) {
         >
           <div className="text-left">
             <p className="text-[16px] font-semibold text-gray-900 mb-1">中考题库</p>
-            <p className="text-[13px] text-gray-400">中学英语核心词汇 · 110 词</p>
+            <p className="text-[13px] text-gray-400">
+              中学英语核心词汇 · {wordCount > 0 ? `${wordCount} 词` : '加载中…'}
+            </p>
           </div>
           <span className="text-gray-300 group-hover:text-teal-400 transition-colors text-xl">→</span>
         </button>
