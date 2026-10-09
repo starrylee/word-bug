@@ -14,8 +14,8 @@ export default function ChangeDailyCountModal({ current, onConfirm, onDismiss }:
   const [showCustom, setShowCustom] = useState(false);
 
   const handleCustomConfirm = () => {
-    const val = parseInt(custom);
-    if (isNaN(val) || val < 5 || val > 100 || !Number.isInteger(val)) {
+    const val = parseFloat(custom);
+    if (!custom.trim() || isNaN(val) || !Number.isInteger(val) || val < 5 || val > 100) {
       setError('请输入 5 到 100 之间的数字');
       return;
     }
@@ -61,6 +61,7 @@ export default function ChangeDailyCountModal({ current, onConfirm, onDismiss }:
               placeholder="5 ~ 100"
               value={custom}
               onChange={e => { setCustom(e.target.value); setError(''); }}
+              onKeyDown={e => e.key === 'Enter' && handleCustomConfirm()}
               className="flex-1 px-4 py-3 border border-gray-200 rounded-xl text-[15px] outline-none focus:border-teal-400 transition-colors"
             />
             <button
