@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Word, Feedback, FeedbackListId, LearnedWord } from '../types';
 import { getDueReviewWordIds, getTimedReminderWords } from '../utils/schedule';
 import { getNow } from '../utils/time';
@@ -81,14 +81,9 @@ export default function StudyPage({
   // review), so WordCard remounts and resets its internal flip state (AC-1).
   const [cardEpoch, setCardEpoch] = useState(0);
 
-  // Mark new words as learned on mount when starting in 'new' phase
-  const markedNewRef = useRef(false);
-  useEffect(() => {
-    if (phase === 'new' && !markedNewRef.current && initial.sessionWordIds.length > 0) {
-      markedNewRef.current = true;
-      onMarkWordsLearned(initial.sessionWordIds);
-    }
-  }, []); // intentionally empty — run only on mount
+  // FT-005-US-01 AC-5：新词按词级粒度在首次反馈时标记已学（learnedAt=实际学习时刻），
+  // 半批中断时未反馈的词不进入复习计划；markWordsLearned 对已存在词幂等跳过，
+  // 复习阶段的词已在学习时标记过，不会重复记录。
 
   // In-page timed reminder check (every 30s)
   useEffect(() => {
@@ -114,6 +109,8 @@ export default function StudyPage({
   const handleFeedback = useCallback((feedback: Feedback) => {
     const word = queue[currentIndex];
     onFeedback(word.id, feedback, currentList);
+    // FT-005-US-01 AC-5：新词逐词标记，learnedAt 取该词实际学习时刻
+    if (phase === 'new') onMarkWordsLearned([word.id]);
 
     const newForgotIds = feedback === 'forgot' ? [...forgotIds, word.id] : forgotIds;
     const isLast = currentIndex === queue.length - 1;
@@ -149,8 +146,6 @@ export default function StudyPage({
         setForgotIds([]);
         setPass(1);
         setCurrentList('daily_new');
-        markedNewRef.current = true;
-        onMarkWordsLearned(ids);
       } else {
         setPhase('done');
         onNewComplete();
