@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { Word, Feedback, LearnedWord } from '../types';
+import { Word, Feedback, FeedbackListId, LearnedWord } from '../types';
 import { getDueReviewWordIds, getTimedReminderWords } from '../utils/schedule';
 import { getNow } from '../utils/time';
 import WordCard from '../components/WordCard';
@@ -15,7 +15,7 @@ interface StudyPageProps {
   simulatedTime: number | null;
   todayReviewDone: boolean;
   todayNewDone: boolean;
-  onFeedback: (wordId: string, feedback: Feedback) => void;
+  onFeedback: (wordId: string, feedback: Feedback, list: FeedbackListId) => void;
   onReviewComplete: (wordIds: string[]) => void;
   onNewComplete: () => void;
   onMarkWordsLearned: (wordIds: string[]) => void;
@@ -71,6 +71,10 @@ export default function StudyPage({
   const [forgotIds, setForgotIds] = useState<string[]>([]);
   const [pass, setPass] = useState(1);
   const [sessionWordIds] = useState<string[]>(initial.sessionWordIds);
+  // FT-004-US-03 AC-2：反馈发生时所在清单（新词/复习/定时复习）
+  const [currentList, setCurrentList] = useState<FeedbackListId>(
+    initial.phase === 'review' ? 'review' : 'daily_new'
+  );
   const [reminderModal, setReminderModal] = useState<{ type: '30min' | '12hr'; wordIds: string[] } | null>(null);
   const [reminderDismissed, setReminderDismissed] = useState(false);
   // Bumped whenever the queue is replaced outside handleFeedback (e.g. reminder
@@ -109,7 +113,7 @@ export default function StudyPage({
 
   const handleFeedback = useCallback((feedback: Feedback) => {
     const word = queue[currentIndex];
-    onFeedback(word.id, feedback);
+    onFeedback(word.id, feedback, currentList);
 
     const newForgotIds = feedback === 'forgot' ? [...forgotIds, word.id] : forgotIds;
     const isLast = currentIndex === queue.length - 1;
@@ -145,6 +149,7 @@ export default function StudyPage({
         setCurrentIndex(0);
         setForgotIds([]);
         setPass(1);
+        setCurrentList('daily_new');
         markedNewRef.current = true;
         onMarkWordsLearned(ids);
       } else {
@@ -155,7 +160,7 @@ export default function StudyPage({
       onNewComplete();
       setPhase('done');
     }
-  }, [queue, currentIndex, forgotIds, phase, sessionWordIds, wordbank, learnedWords, totalLearnedCount, dailyNewCount, todayNewDone, now, onFeedback, onReviewComplete, onNewComplete, onMarkWordsLearned]);
+  }, [queue, currentIndex, forgotIds, phase, sessionWordIds, wordbank, learnedWords, totalLearnedCount, dailyNewCount, todayNewDone, now, onFeedback, onReviewComplete, onNewComplete, onMarkWordsLearned, currentList]);
 
   if (phase === 'done') return null;
 
@@ -208,6 +213,7 @@ export default function StudyPage({
             setQueue(words);
             setCurrentIndex(0);
             setForgotIds([]);
+            setCurrentList('timed_review');
             setReminderModal(null);
             onReviewComplete(reminderModal.wordIds);
           }}

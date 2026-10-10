@@ -8,6 +8,9 @@ export interface Word {
 
 export type Feedback = 'forgot' | 'fuzzy' | 'know';
 
+/** 反馈发生时所在清单（FT-004-US-03 AC-2 所属清单） */
+export type FeedbackListId = 'daily_new' | 'review' | 'timed_review';
+
 export type ReviewNodeId = '30min' | '12hr' | 'day2' | 'day4' | 'day8' | 'day15' | 'day30';
 
 export interface LearnedWord {
@@ -48,6 +51,7 @@ export interface StudyLogEntry {
   wordId?: string;
   action: string;
   feedback?: Feedback | null;
+  list?: FeedbackListId;
   event?: string;
   date?: string;
 }

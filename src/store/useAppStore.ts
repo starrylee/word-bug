@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { AppState, DEFAULT_STATE, Feedback, LearnedWord, ReviewNodeId, StudyLogEntry } from '../types';
+import { AppState, DEFAULT_STATE, Feedback, FeedbackListId, LearnedWord, ReviewNodeId, StudyLogEntry } from '../types';
 import { getNow, getDateStr } from '../utils/time';
 import { getPendingNodes } from '../utils/schedule';
 
@@ -84,14 +84,15 @@ export function useAppStore() {
       });
     },
 
-    recordFeedback: (wordId: string, feedback: Feedback) => {
+    recordFeedback: (wordId: string, feedback: Feedback, list?: FeedbackListId) => {
       const ts = getNow(state.simulatedTime);
       update(s => ({
         ...s,
         learnedWords: s.learnedWords.map(w =>
           w.wordId === wordId ? { ...w, feedback } : w
         ),
-        studyLog: [...s.studyLog, { ts, wordId, action: 'feedback', feedback }],
+        // FT-004-US-03 AC-2：词级粒度记录（单词/档位/所属清单/时间）
+        studyLog: [...s.studyLog, { ts, wordId, action: 'feedback', feedback, list }],
       }));
     },
 
