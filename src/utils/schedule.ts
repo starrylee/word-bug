@@ -15,14 +15,12 @@ export function getNodeDueTimestamp(word: LearnedWord, node: ReviewNodeId): numb
   }
 }
 
-// Words that need to show in today's daily review list
-export function getDueReviewWordIds(learnedWords: LearnedWord[], now: number): string[] {
-  const today = getDateStr(now);
+function getDueWordIds(learnedWords: LearnedWord[], now: number, nodes: ReviewNodeId[]): string[] {
   const dueIds: string[] = [];
 
   for (const word of learnedWords) {
     let isDue = false;
-    for (const node of REVIEW_NODES) {
+    for (const node of nodes) {
       if (word.reviewedNodes.includes(node)) continue;
       const due = getNodeDueTimestamp(word, node);
       // For timed nodes: due if timestamp passed
@@ -36,6 +34,17 @@ export function getDueReviewWordIds(learnedWords: LearnedWord[], now: number): s
   }
 
   return dueIds;
+}
+
+// Words that need to show in today's daily review list
+export function getDueReviewWordIds(learnedWords: LearnedWord[], now: number): string[] {
+  return getDueWordIds(learnedWords, now, REVIEW_NODES);
+}
+
+// FT-004-US-05：当天任务完成判定口径——仅统计日程复习节点（day2..day30），
+// 30min/12hr 即时提醒节点属 FT-005 弹窗范畴，不影响"今日任务已完成"态。
+export function getScheduledReviewWordIds(learnedWords: LearnedWord[], now: number): string[] {
+  return getDueWordIds(learnedWords, now, REVIEW_NODES.filter(n => n !== '30min' && n !== '12hr'));
 }
 
 // Mark all overdue nodes as completed for a word (called after review session)

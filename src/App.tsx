@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAppStore } from './store/useAppStore';
 import { Word } from './types';
-import { getDueReviewWordIds } from './utils/schedule';
+import { getScheduledReviewWordIds } from './utils/schedule';
 import { getNow, getDateStr, daysBetween } from './utils/time';
 
 import Navbar from './components/Navbar';
@@ -58,7 +58,9 @@ export default function App() {
   }, [state.firstStudyTimestamp, todayStr, state.isGuest, state.savePromptDismissed, savePromptTriggered]);
 
   // Compute daily done state
-  const reviewWordIds = wordbank.length > 0 ? getDueReviewWordIds(state.learnedWords, now) : [];
+  // FT-004-US-05：完成判定排除 30min/12hr 即时提醒节点（属 FT-005 弹窗），
+  // 否则新词学完 30 分钟后完成态会被翻回，违反 AC-2。
+  const reviewWordIds = wordbank.length > 0 ? getScheduledReviewWordIds(state.learnedWords, now) : [];
   const hasReviewToday = reviewWordIds.length > 0 && !state.todayReviewDone;
   const hasNewToday = state.totalLearnedCount < wordbank.length && !state.todayNewDone;
   const isDailyDone = !hasReviewToday && !hasNewToday && state.view === 'study';

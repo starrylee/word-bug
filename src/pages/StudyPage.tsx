@@ -139,7 +139,6 @@ export default function StudyPage({
     // Phase complete — advance
     if (phase === 'review') {
       onReviewComplete(sessionWordIds);
-      const reviewWordIds = getDueReviewWordIds(learnedWords, now);
       const hasNew = totalLearnedCount < wordbank.length && !todayNewDone;
       if (hasNew) {
         const ids = wordbank.slice(totalLearnedCount, totalLearnedCount + dailyNewCount).map(w => w.id);
