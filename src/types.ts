@@ -21,6 +21,18 @@ export interface LearnedWord {
   reviewedNodes: ReviewNodeId[];
 }
 
+/**
+ * FT-005-US-02：进行中的新词批次。
+ * 生成时刻固化批次边界（词序快照），是词级续背（AC-2）、中断顺延（AC-3）、
+ * 每日新词数变更后批次切换（AC-4）的数据基础——批次一旦生成本身不再随
+ * dailyNewCount / 学习进度变化，进度通过过滤已学词体现。
+ */
+export interface NewWordBatch {
+  wordIds: string[];
+  /** 批次生成日期（YYYY-MM-DD） */
+  date: string;
+}
+
 export type AppView =
   | 'bank-select'
   | 'count-select'
@@ -43,6 +55,7 @@ export interface AppState {
   todayReviewDone: boolean;
   todayNewDone: boolean;
   longBreakHandled: boolean;
+  currentNewBatch: NewWordBatch | null;
   studyLog: StudyLogEntry[];
 }
 
@@ -72,5 +85,6 @@ export const DEFAULT_STATE: AppState = {
   todayReviewDone: false,
   todayNewDone: false,
   longBreakHandled: false,
+  currentNewBatch: null,
   studyLog: [],
 };

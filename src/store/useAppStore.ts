@@ -115,11 +115,19 @@ export function useAppStore() {
       }));
     },
 
+    // FT-005-US-02：进入新词阶段时固化当日批次快照（AC-2 词级续背 / AC-4 批次边界）
+    startNewBatch: (wordIds: string[]) => {
+      const ts = getNow(state.simulatedTime);
+      update(s => ({ ...s, currentNewBatch: { wordIds, date: getDateStr(ts) } }));
+    },
+
     completeNewSession: () => {
       const nowTs = getNow(state.simulatedTime);
       update(s => ({
         ...s,
         todayNewDone: true,
+        // FT-005-US-02：批次完成即清空，次日（或下次进入）生成新批次
+        currentNewBatch: null,
         lastOpenDate: getDateStr(nowTs),
         todayDate: getDateStr(nowTs),
         studyLog: [...s.studyLog, {
@@ -153,6 +161,8 @@ export function useAppStore() {
         }),
         todayReviewDone: false,
         todayNewDone: false,
+        // FT-005-US-02：重置起点后旧批次快照失效，一并清空
+        currentNewBatch: null,
         longBreakHandled: true,
       }));
       return true;

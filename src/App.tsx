@@ -104,10 +104,12 @@ export default function App() {
                 simulatedTime={state.simulatedTime}
                 todayReviewDone={state.todayReviewDone}
                 todayNewDone={state.todayNewDone}
+                currentNewBatch={state.currentNewBatch}
                 onFeedback={actions.recordFeedback}
                 onReviewComplete={actions.completeReviewForWords}
                 onNewComplete={actions.completeNewSession}
                 onMarkWordsLearned={actions.markWordsLearned}
+                onStartNewBatch={actions.startNewBatch}
               />
             )}
           </>
