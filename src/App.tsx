@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAppStore } from './store/useAppStore';
 import { Word } from './types';
-import { getScheduledReviewWordIds } from './utils/schedule';
+import { isDailyComplete } from './utils/daily';
 import { getNow, getDateStr, daysBetween } from './utils/time';
 
 import Navbar from './components/Navbar';
@@ -60,10 +60,14 @@ export default function App() {
   // Compute daily done state
   // FT-004-US-05：完成判定排除 30min/12hr 即时提醒节点（属 FT-005 弹窗），
   // 否则新词学完 30 分钟后完成态会被翻回，违反 AC-2。
-  const reviewWordIds = wordbank.length > 0 ? getScheduledReviewWordIds(state.learnedWords, now) : [];
-  const hasReviewToday = reviewWordIds.length > 0 && !state.todayReviewDone;
-  const hasNewToday = state.totalLearnedCount < wordbank.length && !state.todayNewDone;
-  const isDailyDone = !hasReviewToday && !hasNewToday && state.view === 'study';
+  // FT-005-US-03 AC-3/AC-4：既无到期复习也无新词可学（含当天清单已过完
+  // 后再次打开）→ 显示"今日任务已完成"，不重复生成当天清单。
+  const isDailyDone = wordbank.length > 0
+    && isDailyComplete(
+      state.learnedWords, state.totalLearnedCount, wordbank.length, now,
+      state.todayReviewDone, state.todayNewDone,
+    )
+    && state.view === 'study';
 
   return (
     <div className="min-h-screen bg-white text-gray-900">

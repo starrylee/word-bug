@@ -1,5 +1,5 @@
-import { LearnedWord, ReviewNodeId } from '../types';
-import { addDays, getDateStr } from './time';
+import type { LearnedWord, ReviewNodeId } from '../types';
+import { addDays, getDateStr } from './time.ts';
 
 export const REVIEW_NODES: ReviewNodeId[] = ['30min', '12hr', 'day2', 'day4', 'day8', 'day15', 'day30'];
 

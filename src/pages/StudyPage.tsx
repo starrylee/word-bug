@@ -1,12 +1,10 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Word, Feedback, FeedbackListId, LearnedWord, NewWordBatch } from '../types';
-import { getDueReviewWordIds, getTimedReminderWords } from '../utils/schedule';
-import { generateNewBatchIds, getRemainingBatchWordIds } from '../utils/batch';
+import { getTimedReminderWords } from '../utils/schedule';
+import { DailyPhase, planDailySession, planNewPhase } from '../utils/daily';
 import { getNow } from '../utils/time';
 import WordCard from '../components/WordCard';
 import ReminderModal from '../components/ReminderModal';
-
-type SessionPhase = 'review' | 'new' | 'done';
 
 interface StudyPageProps {
   wordbank: Word[];
@@ -24,74 +22,8 @@ interface StudyPageProps {
   onStartNewBatch: (wordIds: string[]) => void;
 }
 
-interface NewPhasePlan {
-  /** 本次要学的新词队列（批次剩余词或新生成批次） */
-  wordIds: string[];
-  /** 需要新生成并持久化的批次；null = 续用现有批次或无需学习 */
-  newBatchIds: string[] | null;
-  /** 无新词可学（批次已学尽或全词表学完，AC-5），应直接判定当日新词完成 */
-  done: boolean;
-}
-
-/**
- * FT-005-US-02 新词阶段计划：
- * - 有进行中批次 → 取批次内未学词续背（AC-2 词级续背 / AC-3 中断顺延 / AC-4 边界固化）；
- * - 无批次 → 按词表顺序生成下一批 dailyNewCount 个（AC-1），并要求持久化快照；
- * - 词表学完（AC-5）或批次词已全部学完（中断恰好落在最后词反馈后）→ done。
- */
-function planNewPhase(
-  wordbank: Word[],
-  learnedWords: LearnedWord[],
-  totalLearnedCount: number,
-  dailyNewCount: number,
-  currentBatch: NewWordBatch | null,
-): NewPhasePlan {
-  if (currentBatch) {
-    const remaining = getRemainingBatchWordIds(currentBatch, learnedWords);
-    if (remaining.length > 0) return { wordIds: remaining, newBatchIds: null, done: false };
-    return { wordIds: [], newBatchIds: null, done: true };
-  }
-  const ids = generateNewBatchIds(wordbank, totalLearnedCount, dailyNewCount);
-  if (ids.length === 0) return { wordIds: [], newBatchIds: null, done: true };
-  return { wordIds: ids, newBatchIds: ids, done: false };
-}
-
-function buildInitialSession(
-  wordbank: Word[],
-  learnedWords: LearnedWord[],
-  totalLearnedCount: number,
-  dailyNewCount: number,
-  now: number,
-  todayReviewDone: boolean,
-  todayNewDone: boolean,
-  currentNewBatch: NewWordBatch | null,
-): {
-  phase: SessionPhase;
-  queue: Word[];
-  sessionWordIds: string[];
-  newBatchIds: string[] | null;
-  batchExhausted: boolean;
-} {
-  const reviewWordIds = getDueReviewWordIds(learnedWords, now);
-  const hasReview = reviewWordIds.length > 0 && !todayReviewDone;
-  const hasNew = totalLearnedCount < wordbank.length && !todayNewDone;
-
-  if (hasReview) {
-    const queue = reviewWordIds.map(id => wordbank.find(w => w.id === id)).filter(Boolean) as Word[];
-    return { phase: 'review', queue, sessionWordIds: reviewWordIds, newBatchIds: null, batchExhausted: false };
-  }
-  if (hasNew) {
-    const plan = planNewPhase(wordbank, learnedWords, totalLearnedCount, dailyNewCount, currentNewBatch);
-    const queue = plan.wordIds.map(id => wordbank.find(w => w.id === id)).filter(Boolean) as Word[];
-    return {
-      phase: plan.done ? 'done' : 'new',
-      queue,
-      sessionWordIds: plan.wordIds,
-      newBatchIds: plan.newBatchIds,
-      batchExhausted: plan.done && !!currentNewBatch,
-    };
-  }
-  return { phase: 'done', queue: [], sessionWordIds: [], newBatchIds: null, batchExhausted: false };
+function toWords(wordbank: Word[], ids: string[]): Word[] {
+  return ids.map(id => wordbank.find(w => w.id === id)).filter(Boolean) as Word[];
 }
 
 export default function StudyPage({
@@ -111,16 +43,19 @@ export default function StudyPage({
 }: StudyPageProps) {
   const now = getNow(simulatedTime);
 
-  const initial = buildInitialSession(
+  // FT-005-US-03：打开网站时的当日编排——先复习后新词（AC-1），
+  // 无复习直入新词（AC-2），都无则 done（AC-3，App 侧由 CompletedPage 兜底）。
+  const initial = planDailySession(
     wordbank, learnedWords, totalLearnedCount, dailyNewCount, now, todayReviewDone, todayNewDone, currentNewBatch
   );
+  const initialWordIds = initial.phase === 'review' ? initial.reviewWordIds : initial.newWordIds;
 
-  const [phase, setPhase] = useState<SessionPhase>(initial.phase);
-  const [queue, setQueue] = useState<Word[]>(initial.queue);
+  const [phase, setPhase] = useState<DailyPhase>(initial.phase);
+  const [queue, setQueue] = useState<Word[]>(toWords(wordbank, initialWordIds));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [forgotIds, setForgotIds] = useState<string[]>([]);
   const [pass, setPass] = useState(1);
-  const [sessionWordIds] = useState<string[]>(initial.sessionWordIds);
+  const [sessionWordIds] = useState<string[]>(initialWordIds);
   // FT-004-US-03 AC-2：反馈发生时所在清单（新词/复习/定时复习）
   const [currentList, setCurrentList] = useState<FeedbackListId>(
     initial.phase === 'review' ? 'review' : 'daily_new'
@@ -206,7 +141,7 @@ export default function StudyPage({
           onNewComplete();
         } else {
           if (plan.newBatchIds) onStartNewBatch(plan.newBatchIds);
-          const newQueue = plan.wordIds.map(id => wordbank.find(w => w.id === id)).filter(Boolean) as Word[];
+          const newQueue = toWords(wordbank, plan.wordIds);
           setPhase('new');
           setQueue(newQueue);
           setCurrentIndex(0);

@@ -13,7 +13,8 @@
     "validate:content": "node scripts/validate-vocab.mjs data/zhongkao-vocab-content.json --full",
     "import:vocab": "node scripts/import-vocab.mjs",
     "test:vocab": "node scripts/test-vocab-lookup.mjs",
-    "test:batch": "node scripts/test-new-batch.mjs"
+    "test:batch": "node scripts/test-new-batch.mjs",
+    "test:daily": "node scripts/test-daily-orchestration.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
