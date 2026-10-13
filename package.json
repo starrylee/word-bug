@@ -18,7 +18,8 @@
     "test:interrupt": "node scripts/test-interruption.mjs",
     "test:restart": "node scripts/test-restart-from-word.mjs",
     "test:reminder": "node scripts/test-timed-reminder.mjs",
-    "test:saveprompt": "node scripts/test-save-prompt.mjs"
+    "test:saveprompt": "node scripts/test-save-prompt.mjs",
+    "test:register": "node scripts/test-register.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",

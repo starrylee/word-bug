@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { validatePhone, verifyOtp, DEMO_OTP } from '../utils/auth';
 
 interface SaveProgressModalProps {
   onRegister: (phone: string) => void;
@@ -14,21 +15,24 @@ export default function SaveProgressModal({ onRegister, onDismiss, isPrompt }: S
   const [phoneSubmitted, setPhoneSubmitted] = useState('');
 
   const handleSendOtp = () => {
-    const clean = phone.replace(/\s/g, '');
-    if (!/^1[3-9]\d{9}$/.test(clean)) {
-      setError('请输入正确的手机号');
+    // AC-3：非法手机号不发送验证码，仅提示
+    const error = validatePhone(phone);
+    if (error) {
+      setError(error);
       return;
     }
-    setPhoneSubmitted(clean);
+    setPhoneSubmitted(phone.replace(/\s/g, ''));
     setStep('otp');
     setError('');
   };
 
   const handleVerify = () => {
-    if (otp !== '123456') {
-      setError('验证码错误，请重试');
+    // AC-2：验证码错误不能完成注册，停留可重新输入（由 error 文案承接）
+    if (!verifyOtp(otp, DEMO_OTP)) {
+      setError('验证码错误');
       return;
     }
+    // AC-1/AC-4：注册与登录同构，注册/登录分流由上层 onRegister 决定
     onRegister(phoneSubmitted);
   };
 

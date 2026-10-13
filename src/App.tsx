@@ -3,6 +3,7 @@ import { useAppStore } from './store/useAppStore';
 import { Word } from './types';
 import { isDailyComplete, planBreakReturn } from './utils/daily';
 import { planSavePrompt } from './utils/savePrompt';
+import { registerAccount } from './utils/accountStore';
 import { planTimedReminder, TimedReminderPlan } from './utils/schedule';
 import { getNow } from './utils/time';
 
@@ -189,7 +190,10 @@ export default function App() {
       {showSaveModal && (
         <SaveProgressModal
           onRegister={(phone) => {
+            // FT-006-US-02 AC-4：登录与注册同构——已注册手机号登录已有账号，
+            // 新手机号登记账号；两者均进入已登录态
             actions.registerPhone(phone);
+            registerAccount(phone);
             setShowSaveModal(false);
           }}
           onDismiss={() => {
