@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useAppStore } from './store/useAppStore';
 import { Word } from './types';
 import { isDailyComplete, planBreakReturn } from './utils/daily';
+import { planSavePrompt } from './utils/savePrompt';
 import { planTimedReminder, TimedReminderPlan } from './utils/schedule';
-import { getNow, getDateStr, daysBetween } from './utils/time';
+import { getNow } from './utils/time';
 
 import Navbar from './components/Navbar';
 import DebugPanel from './components/DebugPanel';
@@ -65,17 +66,22 @@ export default function App() {
     }
   }, [state.view, wordbank.length, todayStr]);
 
-  // "Save progress" nudge on 3rd natural day
+  // FT-006-US-01 "保存进度"提示：游客自首次背词之日起第 3 个自然日起，
+  // 每个自然日首开弹一次（弹出时刻登记 savePromptLastDate，同日刷新/重开不重复）；
+  // "以后再说"仅关闭本次弹窗不阻断背词；注册后 isGuest=false 终止（AC-1~AC-4）。
   useEffect(() => {
-    if (!state.isGuest || state.savePromptDismissed || savePromptTriggered) return;
-    if (!state.firstStudyTimestamp) return;
-    const firstDate = getDateStr(state.firstStudyTimestamp);
-    const daysSince = daysBetween(firstDate, todayStr);
-    if (daysSince >= 2) { // 3rd day = 2 days after first
+    if (savePromptTriggered) return;
+    if (planSavePrompt({
+      isGuest: state.isGuest,
+      firstStudyTimestamp: state.firstStudyTimestamp,
+      lastPromptDate: state.savePromptLastDate,
+      todayStr,
+    })) {
       setSavePromptTriggered(true);
+      actions.markSavePromptShown();
       setShowSaveModal(true);
     }
-  }, [state.firstStudyTimestamp, todayStr, state.isGuest, state.savePromptDismissed, savePromptTriggered]);
+  }, [state.firstStudyTimestamp, state.isGuest, state.savePromptLastDate, todayStr, savePromptTriggered]);
 
   // Compute daily done state
   // FT-004-US-05：完成判定排除 30min/12hr 即时提醒节点（属 FT-005 弹窗），
@@ -187,7 +193,8 @@ export default function App() {
             setShowSaveModal(false);
           }}
           onDismiss={() => {
-            actions.dismissSavePrompt();
+            // AC-2/AC-3："以后再说"只关本次弹窗，不设永久开关；
+            // 当日已登记 savePromptLastDate，次日照常再弹
             setShowSaveModal(false);
           }}
           isPrompt={savePromptTriggered && state.isGuest}

@@ -50,7 +50,8 @@ export interface AppState {
   learnedWords: LearnedWord[];
   totalLearnedCount: number;
   simulatedTime: number | null;
-  savePromptDismissed: boolean;
+  /** FT-006-US-01：上次弹出"保存进度"提示的自然日（YYYY-MM-DD）。同日不重复弹（AC-3）；注册后由 isGuest 终止（AC-4） */
+  savePromptLastDate: string | null;
   todayDate: string | null;
   todayReviewDone: boolean;
   todayNewDone: boolean;
@@ -80,7 +81,7 @@ export const DEFAULT_STATE: AppState = {
   learnedWords: [],
   totalLearnedCount: 0,
   simulatedTime: null,
-  savePromptDismissed: false,
+  savePromptLastDate: null,
   todayDate: null,
   todayReviewDone: false,
   todayNewDone: false,

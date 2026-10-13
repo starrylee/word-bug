@@ -171,12 +171,15 @@ export function useAppStore() {
       update(s => ({ ...s, dailyNewCount: count }));
     },
 
+    // FT-006-US-01：注册成功即终止"保存进度"提示（AC-4）
     registerPhone: (phone: string) => {
-      update(s => ({ ...s, phone, isGuest: false, savePromptDismissed: true }));
+      update(s => ({ ...s, phone, isGuest: false }));
     },
 
-    dismissSavePrompt: () => {
-      update(s => ({ ...s, savePromptDismissed: true }));
+    // FT-006-US-01：记录当日已弹过提示——弹出时刻即登记，同自然日不重复（AC-3），
+    // 无论用户点"以后再说"还是直接关掉弹窗，次日首开均照常再弹
+    markSavePromptShown: () => {
+      update(s => ({ ...s, savePromptLastDate: todayStr }));
     },
 
     setSimulatedTime: (time: number | null) => {

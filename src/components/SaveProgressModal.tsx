@@ -37,7 +37,7 @@ export default function SaveProgressModal({ onRegister, onDismiss, isPrompt }: S
       <div className="w-full max-w-sm bg-white rounded-t-2xl sm:rounded-2xl p-6 shadow-xl">
         {isPrompt && step === 'phone' && (
           <p className="text-[13px] text-amber-600 bg-amber-50 rounded-lg px-3 py-2 mb-4">
-            你已连续学习 3 天，注册后可跨设备保存进度
+            学习进度目前仅保存在本机，注册后可跨设备永久保存
           </p>
         )}
 

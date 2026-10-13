@@ -17,7 +17,8 @@
     "test:daily": "node scripts/test-daily-orchestration.mjs",
     "test:interrupt": "node scripts/test-interruption.mjs",
     "test:restart": "node scripts/test-restart-from-word.mjs",
-    "test:reminder": "node scripts/test-timed-reminder.mjs"
+    "test:reminder": "node scripts/test-timed-reminder.mjs",
+    "test:saveprompt": "node scripts/test-save-prompt.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
