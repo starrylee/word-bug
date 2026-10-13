@@ -3,7 +3,9 @@ import { useAppStore } from './store/useAppStore';
 import { Word } from './types';
 import { isDailyComplete, planBreakReturn } from './utils/daily';
 import { planSavePrompt } from './utils/savePrompt';
-import { registerAccount, mergeGuestLogIntoAccount } from './utils/accountStore';
+import { registerAccount, mergeGuestLogIntoAccount, readAccounts } from './utils/accountStore';
+import { loadAccountSnapshot } from './utils/accountSync';
+import { resolveAccountAction } from './utils/auth';
 import { planTimedReminder, TimedReminderPlan } from './utils/schedule';
 import { getNow } from './utils/time';
 
@@ -190,12 +192,18 @@ export default function App() {
       {showSaveModal && (
         <SaveProgressModal
           onRegister={(phone) => {
-            // FT-006-US-02 AC-4：登录与注册同构——已注册手机号登录已有账号，
-            // 新手机号登记账号；两者均进入已登录态
-            actions.registerPhone(phone);
-            registerAccount(phone);
+            // FT-006-US-02 AC-4 / FT-006-US-04：登录与注册同构——已注册手机号
+            // 登录已有账号（进度取账号快照，方案 A 本地游客清单不再展示），
+            // 新手机号登记账号（进度本地保留并归档为账号快照）
+            const action = resolveAccountAction(phone, readAccounts(localStorage));
+            if (action === 'login') {
+              actions.loginPhone(phone, loadAccountSnapshot(phone));
+            } else {
+              actions.registerPhone(phone);
+              registerAccount(phone);
+            }
             // FT-006-US-03 AC-2：游客匿名行为日志归并到账号（幂等去重，
-            // 每日完成率统计在注册前后连续）
+            // 每日完成率统计在注册前后连续；注册/登录两路径均执行）
             mergeGuestLogIntoAccount(phone, state.studyLog);
             setShowSaveModal(false);
           }}

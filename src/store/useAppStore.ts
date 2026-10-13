@@ -4,6 +4,7 @@ import { getNow, getDateStr } from '../utils/time';
 import { getPendingNodes } from '../utils/schedule';
 import { planRestartFromWord } from '../utils/daily';
 import { mergeProgressOnRegister } from '../utils/progressMerge';
+import { applyAccountSnapshotOnLogin, saveAccountSnapshot, type AccountSnapshot } from '../utils/accountSync';
 
 const STORAGE_KEY = 'worddaily_v1';
 
@@ -20,6 +21,9 @@ function loadState(): AppState {
 function saveState(state: AppState) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    // FT-006-US-04：已登录状态下每次状态落盘同时更新账号进度快照
+    // （模拟服务端同步，保证设备 B 登录取到的进度与账号最新进度一致）
+    if (!state.isGuest && state.phone) saveAccountSnapshot(state.phone, state);
   } catch {}
 }
 
@@ -176,6 +180,12 @@ export function useAppStore() {
     // FT-006-US-03：进度保留由 mergeProgressOnRegister 承载（AC-1 进度字段不变）
     registerPhone: (phone: string) => {
       update(s => mergeProgressOnRegister(s, phone));
+    },
+
+    // FT-006-US-04 AC-2：跨设备登录——进度字段以账号快照为准覆盖本地（方案 A），
+    // 本地游客清单不再展示；无快照兜底为仅切身份（语义在 applyAccountSnapshotOnLogin）
+    loginPhone: (phone: string, snapshot: AccountSnapshot | null) => {
+      update(s => applyAccountSnapshotOnLogin(s, phone, snapshot));
     },
 
     // FT-006-US-01：记录当日已弹过提示——弹出时刻即登记，同自然日不重复（AC-3），

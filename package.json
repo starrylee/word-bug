@@ -20,7 +20,8 @@
     "test:reminder": "node scripts/test-timed-reminder.mjs",
     "test:saveprompt": "node scripts/test-save-prompt.mjs",
     "test:register": "node scripts/test-register.mjs",
-    "test:merge": "node scripts/test-progress-merge.mjs"
+    "test:merge": "node scripts/test-progress-merge.mjs",
+    "test:crossdevice": "node scripts/test-cross-device-login.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
