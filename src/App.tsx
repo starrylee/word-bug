@@ -3,7 +3,7 @@ import { useAppStore } from './store/useAppStore';
 import { Word } from './types';
 import { isDailyComplete, planBreakReturn } from './utils/daily';
 import { planSavePrompt } from './utils/savePrompt';
-import { registerAccount } from './utils/accountStore';
+import { registerAccount, mergeGuestLogIntoAccount } from './utils/accountStore';
 import { planTimedReminder, TimedReminderPlan } from './utils/schedule';
 import { getNow } from './utils/time';
 
@@ -194,6 +194,9 @@ export default function App() {
             // 新手机号登记账号；两者均进入已登录态
             actions.registerPhone(phone);
             registerAccount(phone);
+            // FT-006-US-03 AC-2：游客匿名行为日志归并到账号（幂等去重，
+            // 每日完成率统计在注册前后连续）
+            mergeGuestLogIntoAccount(phone, state.studyLog);
             setShowSaveModal(false);
           }}
           onDismiss={() => {

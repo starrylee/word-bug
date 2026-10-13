@@ -3,6 +3,7 @@ import { AppState, DEFAULT_STATE, Feedback, FeedbackListId, LearnedWord, ReviewN
 import { getNow, getDateStr } from '../utils/time';
 import { getPendingNodes } from '../utils/schedule';
 import { planRestartFromWord } from '../utils/daily';
+import { mergeProgressOnRegister } from '../utils/progressMerge';
 
 const STORAGE_KEY = 'worddaily_v1';
 
@@ -172,8 +173,9 @@ export function useAppStore() {
     },
 
     // FT-006-US-01：注册成功即终止"保存进度"提示（AC-4）
+    // FT-006-US-03：进度保留由 mergeProgressOnRegister 承载（AC-1 进度字段不变）
     registerPhone: (phone: string) => {
-      update(s => ({ ...s, phone, isGuest: false }));
+      update(s => mergeProgressOnRegister(s, phone));
     },
 
     // FT-006-US-01：记录当日已弹过提示——弹出时刻即登记，同自然日不重复（AC-3），
