@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { AppState, DEFAULT_STATE, Feedback, FeedbackListId, LearnedWord, ReviewNodeId, StudyLogEntry } from '../types';
 import { getNow, getDateStr } from '../utils/time';
 import { getPendingNodes } from '../utils/schedule';
+import { planRestartFromWord } from '../utils/daily';
 
 const STORAGE_KEY = 'worddaily_v1';
 
@@ -149,16 +150,14 @@ export function useAppStore() {
       update(s => ({ ...s, longBreakHandled: true }));
     },
 
+    // FT-005-US-05：从起点词清零重排（AC-3 进度回第 1 天 / AC-4 起点前词不再复习）
     resetFromWord: (wordId: string, wordbank: { id: string }[]) => {
-      const idx = wordbank.findIndex(w => w.id === wordId);
-      if (idx === -1) return false;
+      const plan = planRestartFromWord(wordId, wordbank, state.learnedWords);
+      if (!plan) return false;
       update(s => ({
         ...s,
-        totalLearnedCount: idx,
-        learnedWords: s.learnedWords.filter(w => {
-          const wIdx = wordbank.findIndex(wb => wb.id === w.wordId);
-          return wIdx < idx;
-        }),
+        totalLearnedCount: plan.totalLearnedCount,
+        learnedWords: plan.learnedWords,
         todayReviewDone: false,
         todayNewDone: false,
         // FT-005-US-02：重置起点后旧批次快照失效，一并清空

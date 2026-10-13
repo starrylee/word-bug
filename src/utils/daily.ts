@@ -1,5 +1,5 @@
 import type { LearnedWord, NewWordBatch, Word } from '../types';
-import { getDueReviewWordIds, getScheduledReviewWordIds } from './schedule.ts';
+import { getDueReviewWordIds, getScheduledReviewWordIds, REVIEW_NODES } from './schedule.ts';
 import { generateNewBatchIds, getRemainingBatchWordIds } from './batch.ts';
 import { daysBetween } from './time.ts';
 
@@ -130,6 +130,30 @@ export function planBreakReturn(lastOpenDate: string | null, todayStr: string): 
   const missedDays = daysBetween(lastOpenDate, todayStr) - 1;
   if (missedDays < 0) return { missedDays: 0, showChoice: false };
   return { missedDays, showChoice: missedDays >= 8 };
+}
+
+/**
+ * FT-005-US-05 从词重开清零重排（纯函数）。
+ * - 起点词必须在词表内（AC-2 校验的函数侧兜底），不在返回 null；
+ * - AC-3：进度回到第 1 天 —— totalLearnedCount 置为起点下标，
+ *   新词批次从起点词重新生成（起点词按当日学习日起算复习节点）；
+ * - AC-4：起点之前的词保留在 learnedWords 中（统计上等同已学完），
+ *   但全部复习节点标记为已复习，此后不再出现在任何复习清单。
+ */
+export function planRestartFromWord(
+  wordId: string,
+  wordbank: { id: string }[],
+  learnedWords: LearnedWord[],
+): { totalLearnedCount: number; learnedWords: LearnedWord[] } | null {
+  const idx = wordbank.findIndex(w => w.id === wordId);
+  if (idx === -1) return null;
+  const position = new Map(wordbank.map((w, i) => [w.id, i] as const));
+  return {
+    totalLearnedCount: idx,
+    learnedWords: learnedWords
+      .filter(w => (position.get(w.wordId) ?? -1) < idx)
+      .map(w => ({ ...w, reviewedNodes: [...REVIEW_NODES] })),
+  };
 }
 
 export function isDailyComplete(

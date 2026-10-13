@@ -19,9 +19,15 @@ export default function LongBreakModal({ daysMissed, wordbank, onContinue, onRes
     ? wordbank.filter(w => w.word.toLowerCase().startsWith(query.toLowerCase())).slice(0, 6)
     : [];
 
+  // FT-005-US-05 AC-2：输入词表外单词确认 → "词表中没有这个词"，不进入重开；
+  // AC-3：输入词表内完整单词（点选或手输）均可确认起点。
   const handleConfirmRestart = () => {
-    if (!selected) { setError('请从候选词中选择一个单词'); return; }
-    onRestart(selected.id);
+    const trimmed = query.trim();
+    if (selected) { onRestart(selected.id); return; }
+    if (!trimmed) { setError('请输入单词'); return; }
+    const exact = wordbank.find(w => w.word.toLowerCase() === trimmed.toLowerCase());
+    if (exact) { onRestart(exact.id); return; }
+    setError('词表中没有这个词');
   };
 
   return (

@@ -15,7 +15,8 @@
     "test:vocab": "node scripts/test-vocab-lookup.mjs",
     "test:batch": "node scripts/test-new-batch.mjs",
     "test:daily": "node scripts/test-daily-orchestration.mjs",
-    "test:interrupt": "node scripts/test-interruption.mjs"
+    "test:interrupt": "node scripts/test-interruption.mjs",
+    "test:restart": "node scripts/test-restart-from-word.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
