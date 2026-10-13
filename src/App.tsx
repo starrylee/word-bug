@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAppStore } from './store/useAppStore';
 import { Word } from './types';
-import { isDailyComplete } from './utils/daily';
+import { isDailyComplete, planBreakReturn } from './utils/daily';
 import { getNow, getDateStr, daysBetween } from './utils/time';
 
 import Navbar from './components/Navbar';
@@ -38,10 +38,9 @@ export default function App() {
       actions.markTodayOpened();
     }
 
-    // Long break detection
+    // FT-005-US-04 长期中断检测：中断天数 = 未打开自然日数（gap-1），≥8 天弹选择
     if (!state.longBreakHandled && state.lastOpenDate && state.lastOpenDate !== todayStr) {
-      const gap = daysBetween(state.lastOpenDate, todayStr);
-      if (gap >= 8) setShowLongBreak(true);
+      if (planBreakReturn(state.lastOpenDate, todayStr).showChoice) setShowLongBreak(true);
     }
   }, [state.view, wordbank.length, todayStr]);
 
@@ -123,7 +122,7 @@ export default function App() {
       {/* Long break modal */}
       {showLongBreak && wordbank.length > 0 && (
         <LongBreakModal
-          daysMissed={state.lastOpenDate ? daysBetween(state.lastOpenDate, todayStr) : 8}
+          daysMissed={planBreakReturn(state.lastOpenDate, todayStr).missedDays}
           wordbank={wordbank}
           onContinue={() => {
             actions.setLongBreakHandled();

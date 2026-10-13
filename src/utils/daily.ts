@@ -1,6 +1,7 @@
 import type { LearnedWord, NewWordBatch, Word } from '../types';
 import { getDueReviewWordIds, getScheduledReviewWordIds } from './schedule.ts';
 import { generateNewBatchIds, getRemainingBatchWordIds } from './batch.ts';
+import { daysBetween } from './time.ts';
 
 /**
  * FT-005-US-03 每日清单编排纯函数（打开网站时"先复习后新词"的编排决策）。
@@ -106,6 +107,31 @@ export function planDailySession(
  * 口径与 FT-004-US-05 一致：仅统计日程复习节点（day2..day30），
  * 30min/12hr 即时提醒节点属 FT-005 弹窗范畴，不翻回完成态。
  */
+/**
+ * FT-005-US-04 中断时长判定（纯函数）。
+ *
+ * 口径：中断天数 = 返回日与最后打开日之间的**未打开自然日数**
+ * （= daysBetween - 1，"最后打开日"当天是打开过的，不计入中断）。
+ * - 1~7 天（含）：短期中断，不弹选择，直接按 AC-1/AC-2 全量顺延处理；
+ * - ≥8 天：长期中断，弹出"继续按当前节奏 / 从某个单词重新开始"选择（AC-3）；
+ * - AC-5 边界：中断恰 7 天 → showChoice=false；恰 8 天 → showChoice=true。
+ */
+export interface BreakReturnPlan {
+  /** 未打开的自然日数（0 = 当天打开过或首日无记录） */
+  missedDays: number;
+  /** 是否应弹出长期中断选择弹窗（missedDays >= 8） */
+  showChoice: boolean;
+}
+
+export function planBreakReturn(lastOpenDate: string | null, todayStr: string): BreakReturnPlan {
+  if (!lastOpenDate || lastOpenDate === todayStr) {
+    return { missedDays: 0, showChoice: false };
+  }
+  const missedDays = daysBetween(lastOpenDate, todayStr) - 1;
+  if (missedDays < 0) return { missedDays: 0, showChoice: false };
+  return { missedDays, showChoice: missedDays >= 8 };
+}
+
 export function isDailyComplete(
   learnedWords: LearnedWord[],
   totalLearnedCount: number,
