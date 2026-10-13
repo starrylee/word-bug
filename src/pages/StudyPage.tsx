@@ -1,10 +1,14 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Word, Feedback, FeedbackListId, LearnedWord, NewWordBatch } from '../types';
-import { getTimedReminderWords } from '../utils/schedule';
 import { DailyPhase, planDailySession, planNewPhase } from '../utils/daily';
 import { getNow } from '../utils/time';
 import WordCard from '../components/WordCard';
-import ReminderModal from '../components/ReminderModal';
+
+/** FT-005-US-06：App 层提醒弹窗点"现在复习"后注入的定时复习队列（epoch 递增驱动替换） */
+export interface InjectedReview {
+  wordIds: string[];
+  epoch: number;
+}
 
 interface StudyPageProps {
   wordbank: Word[];
@@ -15,6 +19,9 @@ interface StudyPageProps {
   todayReviewDone: boolean;
   todayNewDone: boolean;
   currentNewBatch: NewWordBatch | null;
+  /** FT-005-US-06：注入的定时复习队列；非 null 时本次会话以它为复习队列（含"今日已完成"态下重新进入） */
+  injectedReview: InjectedReview | null;
+  onInjectedReviewDone: () => void;
   onFeedback: (wordId: string, feedback: Feedback, list: FeedbackListId) => void;
   onReviewComplete: (wordIds: string[]) => void;
   onNewComplete: () => void;
@@ -35,6 +42,8 @@ export default function StudyPage({
   todayReviewDone,
   todayNewDone,
   currentNewBatch,
+  injectedReview,
+  onInjectedReviewDone,
   onFeedback,
   onReviewComplete,
   onNewComplete,
@@ -45,9 +54,18 @@ export default function StudyPage({
 
   // FT-005-US-03：打开网站时的当日编排——先复习后新词（AC-1），
   // 无复习直入新词（AC-2），都无则 done（AC-3，App 侧由 CompletedPage 兜底）。
-  const initial = planDailySession(
-    wordbank, learnedWords, totalLearnedCount, dailyNewCount, now, todayReviewDone, todayNewDone, currentNewBatch
-  );
+  // FT-005-US-06：有注入的定时复习队列时优先进入该队列（AC-3）。
+  const initial = injectedReview
+    ? {
+        phase: 'review' as DailyPhase,
+        reviewWordIds: injectedReview.wordIds,
+        newWordIds: [],
+        newBatchIds: null,
+        batchExhausted: false,
+      }
+    : planDailySession(
+        wordbank, learnedWords, totalLearnedCount, dailyNewCount, now, todayReviewDone, todayNewDone, currentNewBatch
+      );
   const initialWordIds = initial.phase === 'review' ? initial.reviewWordIds : initial.newWordIds;
 
   const [phase, setPhase] = useState<DailyPhase>(initial.phase);
@@ -60,11 +78,23 @@ export default function StudyPage({
   const [currentList, setCurrentList] = useState<FeedbackListId>(
     initial.phase === 'review' ? 'review' : 'daily_new'
   );
-  const [reminderModal, setReminderModal] = useState<{ type: '30min' | '12hr'; wordIds: string[] } | null>(null);
-  const [reminderDismissed, setReminderDismissed] = useState(false);
-  // Bumped whenever the queue is replaced outside handleFeedback (e.g. reminder
-  // review), so WordCard remounts and resets its internal flip state (AC-1).
+  // Bumped whenever the queue is replaced outside handleFeedback (e.g. injected
+  // timed review), so WordCard remounts and resets its internal flip state (AC-1).
   const [cardEpoch, setCardEpoch] = useState(0);
+
+  // FT-005-US-06：会话中途注入定时复习（epoch 递增）→ 替换当前队列为定时复习
+  const consumedEpochRef = useRef(injectedReview ? injectedReview.epoch : 0);
+  useEffect(() => {
+    if (!injectedReview || injectedReview.epoch === consumedEpochRef.current) return;
+    consumedEpochRef.current = injectedReview.epoch;
+    setCardEpoch(e => e + 1);
+    setQueue(toWords(wordbank, injectedReview.wordIds));
+    setCurrentIndex(0);
+    setForgotIds([]);
+    setPass(1);
+    setCurrentList('timed_review');
+    setPhase('review');
+  }, [injectedReview, wordbank]);
 
   // FT-005-US-01 AC-5：新词按词级粒度在首次反馈时标记已学（learnedAt=实际学习时刻），
   // 半批中断时未反馈的词不进入复习计划；markWordsLearned 对已存在词幂等跳过，
@@ -80,27 +110,6 @@ export default function StudyPage({
     // 仅挂载时执行（initial 为挂载快照）
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // In-page timed reminder check (every 30s)
-  useEffect(() => {
-    if (reminderDismissed) return;
-    const check = () => {
-      const nowTs = getNow(simulatedTime);
-      const timedWords = getTimedReminderWords(learnedWords, nowTs);
-      if (timedWords.length > 0 && !reminderModal) {
-        const has30 = timedWords.some(w => {
-          const due30 = w.learnedAt + 30 * 60 * 1000;
-          return !w.reviewedNodes.includes('30min') && due30 <= nowTs;
-        });
-        setReminderModal({
-          type: has30 ? '30min' : '12hr',
-          wordIds: timedWords.map(w => w.wordId),
-        });
-      }
-    };
-    const id = setInterval(check, 30000);
-    return () => clearInterval(id);
-  }, [simulatedTime, learnedWords, reminderDismissed, reminderModal]);
 
   const handleFeedback = useCallback((feedback: Feedback) => {
     const word = queue[currentIndex];
@@ -132,6 +141,8 @@ export default function StudyPage({
     // Phase complete — advance
     if (phase === 'review') {
       onReviewComplete(sessionWordIds);
+      // FT-005-US-06：定时复习队列过完，通知 App 清除注入态（"今日已完成"态下回到 CompletedPage）
+      onInjectedReviewDone();
       const hasNew = totalLearnedCount < wordbank.length && !todayNewDone;
       if (hasNew) {
         // FT-005-US-02：新词队列统一走批次计划（续背或新生成并持久化）
@@ -157,7 +168,7 @@ export default function StudyPage({
       onNewComplete();
       setPhase('done');
     }
-  }, [queue, currentIndex, forgotIds, phase, sessionWordIds, wordbank, learnedWords, totalLearnedCount, dailyNewCount, todayNewDone, currentNewBatch, now, onFeedback, onReviewComplete, onNewComplete, onMarkWordsLearned, onStartNewBatch, currentList]);
+  }, [queue, currentIndex, forgotIds, phase, sessionWordIds, wordbank, learnedWords, totalLearnedCount, dailyNewCount, todayNewDone, currentNewBatch, now, onFeedback, onReviewComplete, onInjectedReviewDone, onNewComplete, onMarkWordsLearned, onStartNewBatch, currentList]);
 
   if (phase === 'done') return null;
 
@@ -197,29 +208,6 @@ export default function StudyPage({
         </div>
       </div>
 
-      {/* Timed reminder modal */}
-      {reminderModal && (
-        <ReminderModal
-          type={reminderModal.type}
-          wordCount={reminderModal.wordIds.length}
-          onReview={() => {
-            const words = reminderModal.wordIds
-              .map(id => wordbank.find(w => w.id === id))
-              .filter(Boolean) as Word[];
-            setCardEpoch(e => e + 1);
-            setQueue(words);
-            setCurrentIndex(0);
-            setForgotIds([]);
-            setCurrentList('timed_review');
-            setReminderModal(null);
-            onReviewComplete(reminderModal.wordIds);
-          }}
-          onDismiss={() => {
-            setReminderModal(null);
-            setReminderDismissed(true);
-          }}
-        />
-      )}
     </div>
   );
 }

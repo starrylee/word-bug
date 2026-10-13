@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useAppStore } from './store/useAppStore';
 import { Word } from './types';
 import { isDailyComplete, planBreakReturn } from './utils/daily';
+import { planTimedReminder, TimedReminderPlan } from './utils/schedule';
 import { getNow, getDateStr, daysBetween } from './utils/time';
 
 import Navbar from './components/Navbar';
@@ -9,6 +10,7 @@ import DebugPanel from './components/DebugPanel';
 import SaveProgressModal from './components/SaveProgressModal';
 import LongBreakModal from './components/LongBreakModal';
 import ChangeDailyCountModal from './components/ChangeDailyCountModal';
+import ReminderModal from './components/ReminderModal';
 
 import BankSelectPage from './pages/BankSelectPage';
 import DailyCountPage from './pages/DailyCountPage';
@@ -22,6 +24,25 @@ export default function App() {
   const [showLongBreak, setShowLongBreak] = useState(false);
   const [showChangeCount, setShowChangeCount] = useState(false);
   const [savePromptTriggered, setSavePromptTriggered] = useState(false);
+
+  // FT-005-US-06 页面停留到点复习提醒：App 级轮询（每 30s），
+  // 学习页与"今日已完成"页停留均触发（AC-1/AC-2，备注假设 5）。
+  // "稍后再说"按 wordId:node 粒度登记——只压本次弹窗的节点，
+  // 12hr 到点（或后续新批次）照常再弹（AC-2）。
+  const [reminder, setReminder] = useState<TimedReminderPlan | null>(null);
+  const [dismissedReminderKeys, setDismissedReminderKeys] = useState<string[]>([]);
+  // 点"现在复习"后注入 StudyPage 的定时复习队列（epoch 递增驱动替换）
+  const [timedReview, setTimedReview] = useState<{ wordIds: string[]; epoch: number } | null>(null);
+
+  useEffect(() => {
+    const check = () => {
+      const nowTs = getNow(state.simulatedTime);
+      setReminder(planTimedReminder(state.learnedWords, dismissedReminderKeys, nowTs));
+    };
+    check();
+    const id = setInterval(check, 30000);
+    return () => clearInterval(id);
+  }, [state.simulatedTime, state.learnedWords, dismissedReminderKeys]);
 
   // Load wordbank (FT-002-US-03 导入产物：元数据 + words 数组)
   useEffect(() => {
@@ -92,7 +113,8 @@ export default function App() {
 
         {state.view === 'study' && wordbank.length > 0 && (
           <>
-            {isDailyDone ? (
+            {/* FT-005-US-06：定时复习激活时优先渲染学习页（"今日已完成"态点"现在复习"也能进入复习，AC-3） */}
+            {isDailyDone && !timedReview ? (
               <CompletedPage
                 learnedWords={state.learnedWords}
                 dailyNewCount={state.dailyNewCount ?? 10}
@@ -108,6 +130,8 @@ export default function App() {
                 todayReviewDone={state.todayReviewDone}
                 todayNewDone={state.todayNewDone}
                 currentNewBatch={state.currentNewBatch}
+                injectedReview={timedReview}
+                onInjectedReviewDone={() => setTimedReview(null)}
                 onFeedback={actions.recordFeedback}
                 onReviewComplete={actions.completeReviewForWords}
                 onNewComplete={actions.completeNewSession}
@@ -118,6 +142,26 @@ export default function App() {
           </>
         )}
       </main>
+
+      {/* Timed reminder modal (FT-005-US-06) */}
+      {reminder && (
+        <ReminderModal
+          type={reminder.type}
+          wordCount={reminder.wordIds.length}
+          onReview={() => {
+            const ids = reminder.wordIds;
+            setReminder(null);
+            // AC-3：立即进入这批词的复习——标记到期节点并注入学习页队列
+            actions.completeReviewForWords(ids);
+            setTimedReview(prev => ({ wordIds: ids, epoch: (prev?.epoch ?? 0) + 1 }));
+          }}
+          onDismiss={() => {
+            // 仅登记本次弹窗涉及的节点，12hr 节点不受影响（AC-2）
+            setDismissedReminderKeys(prev => [...new Set([...prev, ...reminder.dismissKeys])]);
+            setReminder(null);
+          }}
+        />
+      )}
 
       {/* Long break modal */}
       {showLongBreak && wordbank.length > 0 && (

@@ -66,3 +66,49 @@ export function getTimedReminderWords(learnedWords: LearnedWord[], now: number):
     return false;
   });
 }
+
+// FT-005-US-06：页面停留到点复习提醒决策（纯函数）。
+// - AC-1/AC-2：到期未复习的 30min/12hr 节点触发弹窗（有 30min 优先标 30min）；
+// - "稍后再说"按 wordId:node 粒度登记 dismissedKeys——压住本次弹窗的节点，
+//   不影响同一批词 12hr 节点（或后续新批次）到点再弹（AC-2）；
+// - 已复习节点天然排除；错过提醒（页面已关）不在此弹，统一并入到期集合（AC-4）。
+export type TimedReminderType = '30min' | '12hr';
+
+export interface TimedReminderPlan {
+  type: TimedReminderType;
+  wordIds: string[];
+  /** 弹窗内所有词当前到期未复习定时节点的登记键（wordId:node），供"稍后再说"记录 */
+  dismissKeys: string[];
+}
+
+export function planTimedReminder(
+  learnedWords: LearnedWord[],
+  dismissedKeys: Iterable<string>,
+  now: number,
+): TimedReminderPlan | null {
+  const dismissed = new Set(dismissedKeys);
+  const entries: { wordId: string; nodes: TimedReminderType[] }[] = [];
+  const dismissKeys: string[] = [];
+
+  for (const word of learnedWords) {
+    const nodes: TimedReminderType[] = [];
+    for (const node of ['30min', '12hr'] as TimedReminderType[]) {
+      if (word.reviewedNodes.includes(node)) continue;
+      const key = `${word.wordId}:${node}`;
+      if (dismissed.has(key)) continue;
+      if (getNodeDueTimestamp(word, node) <= now) {
+        nodes.push(node);
+        dismissKeys.push(key);
+      }
+    }
+    if (nodes.length > 0) entries.push({ wordId: word.wordId, nodes });
+  }
+
+  if (entries.length === 0) return null;
+  const has30 = entries.some(e => e.nodes.includes('30min'));
+  return {
+    type: has30 ? '30min' : '12hr',
+    wordIds: entries.map(e => e.wordId),
+    dismissKeys,
+  };
+}
